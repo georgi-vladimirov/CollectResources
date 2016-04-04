@@ -43,11 +43,11 @@ public class Main {
                 value = Integer.parseInt(resourceTemp[1]);
             }
 
-            if (collected.containsKey(name)) {
+            if (collected.containsKey(name+ position)) {
                 break;
             } else if (name.equals("stone") || name.equals("gold")
                     || name.equals("wood") || name.equals("food")) {
-                collected.put(name, value);
+                collected.put(name+position, value);
             }
             position += rootStep;
         }
